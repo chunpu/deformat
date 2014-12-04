@@ -54,6 +54,5 @@ Deformat(combined).exec(log)
 }
 ```
 
-
 [travis-image]: https://img.shields.io/travis/chunpu/deformat.svg?style=flat
-[travis-url]: https://travis-ci.org/chunpu/flold status][travis-image]][travis-url]
+[travis-url]: https://travis-ci.org/chunpu/deformat

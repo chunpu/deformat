@@ -54,5 +54,30 @@ Deformat(combined).exec(log)
 }
 ```
 
+Tips
+---
+
+`$var` is sugar for `${var}`
+
+```js
+Deformat('${foo}someword$bar').exec('myfoosomewordmybar')
+// => 
+{
+    foo: 'myfoo',
+    bar: 'mybar'
+}
+```
+
+You can just skip chars by using `*`
+
+```js
+Deformat('$foo * $bar').exec('myfoo xxx-{} ##yyy zzz^( mybar')
+// => 
+{
+    foo: 'myfoo',
+    bar: 'mybar'
+}
+```
+
 [travis-image]: https://img.shields.io/travis/chunpu/deformat.svg?style=flat
 [travis-url]: https://travis-ci.org/chunpu/deformat

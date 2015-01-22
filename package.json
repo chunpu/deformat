@@ -1,11 +1,12 @@
 {
   "name": "deformat",
-  "version": "1.1.5",
-  "description": "deformat is the contrary of format",
+  "version": "1.1.6",
+  "description": "Deformat is the contrary of format, inspired by express/koa route, which makes parsing string with template really simple",
   "main": "index.js",
   "scripts": {
     "test": "node test.index",
-    "performance": "node performance"
+    "performance": "node performance",
+	"readme": "pretty-readme > readme.md"
   },
   "keywords": [
     "format",

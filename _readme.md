@@ -1,19 +1,3 @@
-deformat@1.1.6
-===
-
-[![Build status][travis-image]][travis-url]
-[![NPM version][npm-image]][npm-url]
-[![Downloads][downloads-image]][downloads-url]
-
-Deformat is the contrary of format, inspired by express/koa route, which makes parsing string with template really simple
-
-Installation
----
-
-```sh
-npm install deformat
-```
-
 Usage
 ---
 
@@ -80,15 +64,3 @@ Deformat('$foo * $bar').exec('myfoo xxx-{} ##yyy zzz^( mybar')
     bar: 'mybar'
 }
 ```
-
-License
----
-
-ISC
-
-[npm-image]: https://img.shields.io/npm/v/deformat.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/deformat
-[travis-image]: https://img.shields.io/travis/chunpu/deformat.svg?style=flat-square
-[travis-url]: https://travis-ci.org/chunpu/deformat
-[downloads-image]: http://img.shields.io/npm/dm/deformat.svg?style=flat-square
-[downloads-url]: https://npmjs.org/package/deformat

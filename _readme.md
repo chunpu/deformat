@@ -64,3 +64,17 @@ Deformat('$foo * $bar').exec('myfoo xxx-{} ##yyy zzz^( mybar')
     bar: 'mybar'
 }
 ```
+
+Options
+---
+
+support [RegExp flags](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+
+```js
+var deformat = Deformat('foo $bar', {flags: 'i'})
+deformat.exec('FOO bar')
+// =>
+{
+	bar: 'bar'
+}
+```

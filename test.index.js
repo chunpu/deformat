@@ -37,4 +37,17 @@ assert.deepEqual({
     bar: 'mybar'
 }, t6)
 
+var t7 = Deformat('$foo').exec('a\nb')
+assert(null == t7)
+
+var t8 = Deformat('$foo', {flags: 'm'}).exec('a\nb')
+assert.deepEqual({
+	foo: 'a'
+}, t8)
+
+var t9 = Deformat('foo $bar', {flags: 'i'}).exec('FOO bar')
+assert.deepEqual({
+	bar: 'bar'
+}, t9)
+
 console.log('test pass')

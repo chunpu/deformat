@@ -1,9 +1,17 @@
-deformat@1.1.6
+deformat
 ===
 
 [![Build status][travis-image]][travis-url]
 [![NPM version][npm-image]][npm-url]
 [![Downloads][downloads-image]][downloads-url]
+[![Dependency Status][david-image]][david-url]
+[npm-image]: https://img.shields.io/npm/v/deformat.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/deformat
+[downloads-image]: http://img.shields.io/npm/dm/deformat.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/deformat
+[david-image]: http://img.shields.io/david/chunpu/deformat.svg?style=flat-square
+[david-url]: https://david-dm.org/chunpu/deformat
+
 
 Deformat is the contrary of format, inspired by express/koa route, which makes parsing string with template really simple
 
@@ -11,7 +19,7 @@ Installation
 ---
 
 ```sh
-npm install deformat
+npm i deformat
 ```
 
 Usage
@@ -81,14 +89,26 @@ Deformat('$foo * $bar').exec('myfoo xxx-{} ##yyy zzz^( mybar')
 }
 ```
 
+Options
+---
+
+support [RegExp flags](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+
+```js
+var deformat = Deformat('foo $bar', {flags: 'i'})
+deformat.exec('FOO bar')
+// =>
+{
+	bar: 'bar'
+}
+```
+
 License
 ---
 
-ISC
+[![License][license-image]][license-url]
 
-[npm-image]: https://img.shields.io/npm/v/deformat.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/deformat
 [travis-image]: https://img.shields.io/travis/chunpu/deformat.svg?style=flat-square
 [travis-url]: https://travis-ci.org/chunpu/deformat
-[downloads-image]: http://img.shields.io/npm/dm/deformat.svg?style=flat-square
-[downloads-url]: https://npmjs.org/package/deformat
+[license-image]: http://img.shields.io/npm/l/deformat.svg?style=flat-square
+[license-url]: #

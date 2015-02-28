@@ -24,7 +24,7 @@ function MatchReg(str, opt) {
     this.raw = str
     str = desugar(str)
     this._raw = str
-    this.reg = this.getReg()
+    this.reg = this.getReg(opt.flags)
     this.names = this.getNames()
 }
 
@@ -37,12 +37,12 @@ proto.getNames = function() {
     return names
 }
 
-proto.getReg = function() {
+proto.getReg = function(flags) {
     var nameReg = getVarReg('\\w+')
     var escaped = escapeReg(this._raw)
     var ret = escaped.replace(nameReg, '(?:(.+?))').replace(/\*/g, '(.*)')
     ret = '^' + ret + '$'
-    return new RegExp(ret)
+    return new RegExp(ret, flags)
 }
 
 proto.exec = function(str) {
